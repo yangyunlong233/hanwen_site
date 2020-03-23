@@ -1,0 +1,42 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: hsl(0, 0%, 40%);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+div,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
