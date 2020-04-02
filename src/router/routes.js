@@ -12,8 +12,13 @@ export default [
     component: () => import('../views/Case')
   },
   {
-    path: '/demo',
-    name: 'Demo',
-    component: () => import('../views/Demo')
+    path: '/about',
+    name: 'About',
+    component: () => import('../views/About')
+  },
+  {
+    path: '*',
+    name: '404',
+    component: () => import('../views/404')
   }
 ]

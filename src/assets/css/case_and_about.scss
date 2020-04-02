@@ -1,0 +1,107 @@
+.layout-1200grid {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-layout {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    .item {
+        flex: 0 1 auto;
+        align-self: auto;
+        img {
+            height: auto;
+        }
+        h3 {
+            width: auto;
+            line-height: 1;
+            font-weight: normal;
+            color: $Dark;
+        }
+        p {
+            width: auto;
+            color: $Dark;
+        }
+    }
+}
+
+.home-header-title {
+    position: relative;
+    width: auto;
+    margin: 60px auto ;
+    .title-line {
+        width: 100px;
+        height: 2px;
+        margin: 0 auto;
+        background: $Red;
+    }
+    h2,
+    h3 {
+        width: auto;
+        text-align: center;
+        font-weight: normal;
+        line-height: 1;
+        color: $Dark;
+    }
+    h2 {
+        margin: 40px auto 20px;
+        font-size: 3.4rem;
+    }
+    h3 {
+        margin: 0 auto;
+        font-size: 2.1rem;
+    }
+}
+
+.header {
+    width: auto;
+    height: 425px;
+    background-color: hsla(217, 73%, 29%, 1);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: top left;
+    img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 425px;
+    }
+    h1,
+    h2 {
+        position: absolute;
+        left: 0;
+        font-weight: normal;
+        color: white;
+    }
+    h1 {
+        top: 218px;
+        font-size: 3.6rem;
+    }
+    h2 {
+        top: 166px;
+        font-size: 5.2rem;
+    }
+}
+
+.breadcrumb {
+    ul {
+        margin: 30px auto;
+        li {
+            display: inline-block;
+            height: 16px;
+            padding: 0 10px 0 0;
+            line-height: 16px;
+            vertical-align: middle;
+            font-size: 1.6rem;
+            img {
+                display: inline-block;
+                height: 16px;
+                vertical-align: middle;
+            }
+        }
+    }
+}

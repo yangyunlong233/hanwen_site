@@ -2,12 +2,12 @@
     <div id="Copyright">
       <div class="copy-header">
         <div class="layout-1200grid">
-          <div class="header header-tel">
+          <div class="cp-header header-tel">
             <img src="../assets/img/copy_header_tel@2x.png" alt="tel">
             <div>咨询电话</div>
             <h2>0871-68247886</h2>
           </div>
-          <div class="header header-add">
+          <div class="cp-header header-add">
             <img src="../assets/img/copy_header_add@2x.png" alt="add">
             <div>中国·云南省昆明市·二环西路220号 云南软件园B座601</div>
           </div>
@@ -130,7 +130,7 @@ export default {
   width: auto;
   height: 94px;
   background: hsla(0, 0%, 29%, 1);
-  .header {
+  .cp-header {
     img {
       position: relative;
       top: 3px;
