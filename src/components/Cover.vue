@@ -4,7 +4,7 @@
         <transition-group tag="ol" name="covers" class="cover-container">
           <li v-for="(items, index) in covers" :key="index" v-show="index===num">
             <div class="cover-container-title">
-              <img id="cover_tt_img" :src="items.tt"  :alt="`Cover ${index} Title`">
+              <img id="cover_tt_img" :src="items.tt"  :alt="`Cover ${index} Title`" @click="handleClick(items.link)">
             </div>
             <img id="cover_bg_img" class="cover-container-bg" :src="items.bg" :alt="`Cover ${index} Background`">
           </li>
@@ -17,6 +17,14 @@
 </template>
 
 <script>
+/*
+  Cover Slide component
+  used for those views: Home
+  *** important:
+  covers.link value is 2 way to param:
+    1. give it a router url, like '/about',
+    2. give it a window scroll height value, and mark it 'is an anchor number', like 'anchor400'
+ */
 export default {
   name: 'Cover',
   data () {
@@ -24,20 +32,26 @@ export default {
       covers: [
         {
           tt: 'case_img/cover_1_tt.png',
-          bg: 'case_img/cover_1_bg.png'
+          bg: 'case_img/cover_1_bg.png',
+          link: 'anchor510'
         },
         {
           tt: 'case_img/cover_2_tt.png',
-          bg: 'case_img/cover_2_bg.png'
+          bg: 'case_img/cover_2_bg.png',
+          link: 'anchor3100'
         },
         {
           tt: 'case_img/cover_3_tt.png',
-          bg: 'case_img/cover_3_bg.png'
+          bg: 'case_img/cover_3_bg.png',
+          link: '/about'
         }
       ],
       num: 0,
       time: '',
-      second: 7000
+      second: 6000,
+      anchor_top: 0,
+      anchor_step: 0,
+      scroll_time: ''
     }
   },
   mounted () {
@@ -54,6 +68,24 @@ export default {
       this.num = i
       clearInterval(this.time)
       this.cover_play()
+    },
+    handleClick (link) {
+      if (link.search('anchor') === -1) {
+        this.$router.push(link)
+      } else {
+        this.anchor_top = parseInt(link.replace('anchor', ''))
+        this.scroll_time = setInterval(() => {
+          if (document.documentElement.scrollTop < (this.anchor_top - 5)) {
+            this.anchor_step = Math.round((this.anchor_top - document.documentElement.scrollTop) / 6)
+            window.scrollTo(0, (document.documentElement.scrollTop + this.anchor_step))
+          } else {
+            clearInterval(this.scroll_time)
+            window.scrollTo(0, this.anchor_top)
+            this.anchor_top = 0
+            this.anchor_step = 0
+          }
+        }, 30)
+      }
     }
   }
 }

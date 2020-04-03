@@ -21,10 +21,10 @@
           </ul>
           <div class="copy-end">
             <img src="../assets/img/copy_logo@2x.png" alt="copy logo">
-            <p>Copyright © 2020 HANWEN TECH 版权所有<br>滇ICP备12004664号-6</p>
+            <p>Copyright © 2020 HANWEN TECH 版权所有<br>滇ICP备200022110号-1</p>
           </div>
           <div class="code code-wechat">
-            <img src="../assets/img/2code@2x.png" alt="code">
+            <img src="../assets/img/2code_wechat@2x.png" alt="code">
             <p>扫一扫关注微信公众号</p>
           </div>
           <div class="code code-contact">
@@ -37,6 +37,10 @@
 </template>
 
 <script>
+/*
+Copyright component
+used for those views: Home / About / Case / 404
+*/
 export default {
   name: 'Copyright',
   data () {

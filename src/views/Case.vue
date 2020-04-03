@@ -56,7 +56,7 @@ export default {
   data () {
     return {
       trust: {
-        header_title: '他们，信赖瀚文',
+        header_title: '他们，信赖<span style="color: hsla(360, 100%, 40%, 1); font-weight: bold;">瀚文</span>',
         header_title_en: 'They all trust Hanwen',
         text: '瀚文科技的价值观是获得我们服务对象信任的根本。客户的信任让我们的路走的更远更稳。<br>为客户提供专业科技解决方案以及技术服务，与客户共同创新让瀚文科技的服务迅速遍及云南各地。',
         point_title: '云南省接入服务区域',
@@ -171,6 +171,7 @@ export default {
         color: $Dark;
       }
       p {
+        font-family: 'SC-ExLight';
         font-size: 3.6rem;
         font-weight: normal;
         text-align: center;

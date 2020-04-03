@@ -1,3 +1,14 @@
+/***************************************************
+  Author: ch233
+  Version: 1.0
+  LastUpdate: 2020-04-03
+  **************************************************
+  This style sheet used for those components:
+        * about.vue
+        * case.vue
+        * 404.vue
+ */
+
 .layout-1200grid {
     position: relative;
     width: 1200px;
@@ -78,10 +89,12 @@
         color: white;
     }
     h1 {
-        top: 218px;
+        font-weight: bold;
+        top: 228px;
         font-size: 3.6rem;
     }
     h2 {
+        font-family: 'SC-ExLight';
         top: 166px;
         font-size: 5.2rem;
     }

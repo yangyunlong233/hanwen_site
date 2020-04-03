@@ -22,3 +22,7 @@ yarn-error.log*
 
 # Design files
 design
+
+# origin images backup
+public/case_img/_origin_backup
+src/assets/img/_origin_backup

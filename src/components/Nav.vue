@@ -6,10 +6,9 @@
     <div class="nav-layout">
       <div class="nav-logo"><img src="../assets/img/nav_logo@2x.png" alt="HanWen Tech. Logo"></div>
       <ul>
-        <li><router-link to="/">首页</router-link></li>
-        <li><router-link to="/case">服务案例</router-link></li>
-        <li>关于我们</li>
-        <li>经营团队</li>
+        <li v-for="(item, index) in nav_list" :key="index">
+          <router-link :to="item.link">{{ item.title }}</router-link>
+        </li>
         <li><router-link to="/demo" class="get-demo">获取演示</router-link></li>
       </ul>
     </div>
@@ -17,10 +16,32 @@
 </template>
 
 <script>
+/*
+  Navigation component
+  used for those views: Home / About / Case / 404
+ */
 export default {
   data () {
     return {
-      over_size: 0
+      over_size: 0,
+      nav_list: [
+        {
+          title: '首页',
+          link: '/'
+        },
+        {
+          title: '服务案例',
+          link: '/case'
+        },
+        {
+          title: '关于我们',
+          link: '/about'
+        },
+        {
+          title: '精英团队',
+          link: '/404'
+        }
+      ]
     }
   },
   mounted () {
